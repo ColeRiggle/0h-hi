@@ -17,6 +17,7 @@
 		D6B2DB0E23D384ED00962E46 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2DB0D23D384ED00962E46 /* Extensions.swift */; };
 		D6B2DB1023D384F400962E46 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2DB0F23D384F400962E46 /* VerticalStackView.swift */; };
 		D6B2DB1223D384FB00962E46 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2DB1123D384FB00962E46 /* UIView+Layout.swift */; };
+		D6B2DB1823D3A62100962E46 /* Lobster 1.4.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6B2DB1723D3A62100962E46 /* Lobster 1.4.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D6B2DB0D23D384ED00962E46 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D6B2DB0F23D384F400962E46 /* VerticalStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 		D6B2DB1123D384FB00962E46 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		D6B2DB1723D3A62100962E46 /* Lobster 1.4.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster 1.4.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		D6B2DAF323D3817500962E46 /* 0hh1 */ = {
 			isa = PBXGroup;
 			children = (
+				D6B2DB1323D3926300962E46 /* Resources */,
 				D6B2DB0C23D384AD00962E46 /* Helpers */,
 				D6B2DB0823D381AA00962E46 /* Controller */,
 				D6B2DAF423D3817500962E46 /* AppDelegate.swift */,
@@ -101,6 +104,14 @@
 				D6B2DB0D23D384ED00962E46 /* Extensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D6B2DB1323D3926300962E46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D6B2DB1723D3A62100962E46 /* Lobster 1.4.otf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6B2DB0123D3817700962E46 /* LaunchScreen.storyboard in Resources */,
+				D6B2DB1823D3A62100962E46 /* Lobster 1.4.otf in Resources */,
 				D6B2DAFE23D3817700962E46 /* Assets.xcassets in Resources */,
 				D6B2DAFC23D3817500962E46 /* Main.storyboard in Resources */,
 			);
