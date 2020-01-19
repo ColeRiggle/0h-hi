@@ -21,10 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(windowScene: windowScene)
         window!.makeKeyAndVisible()
-        
-        print("In scence delegate")
-        
-        
+         
         router.loadMainAppStructure()
     }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6030D3F23D42B9500377BCE /* RoutedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6030D3E23D42B9500377BCE /* RoutedNavigationController.swift */; };
+		D682E72723D3F8C5000AE598 /* SectionHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D682E72623D3F8C5000AE598 /* SectionHeaderLabel.swift */; };
 		D6B2DAF523D3817500962E46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2DAF423D3817500962E46 /* AppDelegate.swift */; };
 		D6B2DAF723D3817500962E46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2DAF623D3817500962E46 /* SceneDelegate.swift */; };
 		D6B2DAF923D3817500962E46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2DAF823D3817500962E46 /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D6030D3E23D42B9500377BCE /* RoutedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutedNavigationController.swift; sourceTree = "<group>"; };
+		D682E72623D3F8C5000AE598 /* SectionHeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderLabel.swift; sourceTree = "<group>"; };
 		D6B2DAF123D3817500962E46 /* 0hh1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 0hh1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B2DAF423D3817500962E46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6B2DAF623D3817500962E46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				D6B2DB2723D3B51200962E46 /* RoutedViewController.swift */,
+				D682E72623D3F8C5000AE598 /* SectionHeaderLabel.swift */,
+				D6030D3E23D42B9500377BCE /* RoutedNavigationController.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -215,10 +221,12 @@
 				D6B2DB1B23D3A7C700962E46 /* BoardSelectionViewController.swift in Sources */,
 				D6B2DB1023D384F400962E46 /* VerticalStackView.swift in Sources */,
 				D6B2DAF923D3817500962E46 /* ViewController.swift in Sources */,
+				D6030D3F23D42B9500377BCE /* RoutedNavigationController.swift in Sources */,
 				D6B2DB2123D3B1AB00962E46 /* RootRouter.swift in Sources */,
 				D6B2DAF523D3817500962E46 /* AppDelegate.swift in Sources */,
 				D6B2DAF723D3817500962E46 /* SceneDelegate.swift in Sources */,
 				D6B2DB1223D384FB00962E46 /* UIView+Layout.swift in Sources */,
+				D682E72723D3F8C5000AE598 /* SectionHeaderLabel.swift in Sources */,
 				D6B2DB0B23D381CA00962E46 /* MenuViewController.swift in Sources */,
 				D6B2DB2823D3B51200962E46 /* RoutedViewController.swift in Sources */,
 			);

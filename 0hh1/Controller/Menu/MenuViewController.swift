@@ -10,10 +10,14 @@ import UIKit
 
 class MenuViewController: RoutedViewController {
     
-    let gameTitleLabel = UILabel(text: "Oh hi", font: UIFont(name: "lobster", size: 80) ?? .systemFont(ofSize: 80))
-    let gameVersionLabel = UILabel(text: " v0.1", font: .systemFont(ofSize: 20))
+    let gameTitleLabel = SectionHeaderLabel(text: "Oh hi", size: 80)
+    let gameVersionLabel = UILabel(text: "v0.1", font: .systemFont(ofSize: 20))
     
     let playButton = UIButton(title: "Play")
+    
+    let rulesButton = UIButton(title: "Rules")
+    
+    let settingsButton = UIButton(title: "Settings")
     
     lazy var developerImage: UIImageView = {
         let imageView = UIImageView()
@@ -24,57 +28,62 @@ class MenuViewController: RoutedViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
-        view.translatesAutoresizingMaskIntoConstraints = false
+        view.fillSuperview()
         
-        gameTitleLabel.textAlignment = .center
-        gameTitleLabel.textColor = .white
-        
-        gameTitleLabel.font = UIFont(name: "Lobster 1.4", size: 80)
+        gameTitleLabel.textAlignment = .left
+        gameTitleLabel.widthAnchor.constraint(equalToConstant: gameTitleLabel.intrinsicContentSize.width + 5).isActive = true
         
         gameVersionLabel.textAlignment = .left
         gameVersionLabel.textColor = .systemRed
         
-        playButton.titleLabel?.font = .systemFont(ofSize: 45)
-        playButton.setTitleColor(.white, for: .normal)
+        applyButtonFormatting(button: playButton)
         playButton.addTarget(self, action: #selector(playGame), for: .touchUpInside)
         
-        let gameInfoStackView = UIStackView(arrangedSubviews: [gameTitleLabel, gameVersionLabel])
-        gameInfoStackView.alignment = .lastBaseline
+        applyButtonFormatting(button: rulesButton)
+        
+        applyButtonFormatting(button: settingsButton)
+        
+        let buttonStackView = VerticalStackView(arrangedSubviews: [
+            playButton,
+            rulesButton,
+            settingsButton
+        ], spacing: 20)
+        buttonStackView.alignment = .center
         
         let stackView = VerticalStackView(arrangedSubviews: [
-            gameInfoStackView,
-            playButton,
+            gameTitleLabel,
+            buttonStackView,
             ], spacing: 40)
+        
         stackView.alignment = .center
+        stackView.distribution = .fillProportionally
         
         view.addSubview(stackView)
         view.addSubview(developerImage)
+        view.addSubview(gameVersionLabel)
         
-        stackView.distribution = .fillProportionally
         stackView.anchor(top: view.layoutMarginsGuide.topAnchor, leading: view.layoutMarginsGuide.leadingAnchor, bottom: nil, trailing: view.layoutMarginsGuide.trailingAnchor)
         
-        //stackView.bottomAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: developerImage.topAnchor, multiplier: 40).isActive = true
+        gameVersionLabel.translatesAutoresizingMaskIntoConstraints = false
+        gameVersionLabel.topAnchor.constraint(equalTo: gameTitleLabel.centerYAnchor, constant: 11).isActive = true
+        gameVersionLabel.leadingAnchor.constraint(equalTo: gameTitleLabel.centerXAnchor, constant: (gameTitleLabel.intrinsicContentSize.width / 2) + 10).isActive = true
         
-        developerImage.anchor(top: nil, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
+        developerImage.translatesAutoresizingMaskIntoConstraints = false
+        developerImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        developerImage.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -25).isActive = true
+        developerImage.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        developerImage.contentMode = .scaleAspectFit
         
-        }
+    }
+    
+    fileprivate func applyButtonFormatting(button: UIButton) {
+        button.titleLabel?.font = .systemFont(ofSize: 45)
+        button.setTitleColor(.systemRed, for: .normal)
+    }
     
     @objc fileprivate func playGame(sender: UIButton!) {
-        print("Play button pressed")
-        
-    
-        
         router?.transitionTo(screen: .boardSelection, animatedWithOptions: nil)
     }
     
-//    fileprivate func setupConstraints() {
-//        let margins = view.layoutMarginsGuide
-//        NSLayoutConstraint.activate([
-//            newView.topAnchor.constraint(equalTo: margins.topAnchor),
-//            newView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
-//            newView.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
-//            newView.bottomAnchor.constraint(equalTo: margins.bottomAnchor)
-//        ])
-//    }
 }
 
