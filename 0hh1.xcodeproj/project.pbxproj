@@ -18,6 +18,9 @@
 		D6B2DB1023D384F400962E46 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2DB0F23D384F400962E46 /* VerticalStackView.swift */; };
 		D6B2DB1223D384FB00962E46 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2DB1123D384FB00962E46 /* UIView+Layout.swift */; };
 		D6B2DB1823D3A62100962E46 /* Lobster 1.4.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6B2DB1723D3A62100962E46 /* Lobster 1.4.otf */; };
+		D6B2DB1B23D3A7C700962E46 /* BoardSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2DB1A23D3A7C700962E46 /* BoardSelectionViewController.swift */; };
+		D6B2DB2123D3B1AB00962E46 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2DB2023D3B1AB00962E46 /* RootRouter.swift */; };
+		D6B2DB2823D3B51200962E46 /* RoutedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B2DB2723D3B51200962E46 /* RoutedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		D6B2DB0F23D384F400962E46 /* VerticalStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 		D6B2DB1123D384FB00962E46 /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		D6B2DB1723D3A62100962E46 /* Lobster 1.4.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster 1.4.otf"; sourceTree = "<group>"; };
+		D6B2DB1A23D3A7C700962E46 /* BoardSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardSelectionViewController.swift; sourceTree = "<group>"; };
+		D6B2DB2023D3B1AB00962E46 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		D6B2DB2723D3B51200962E46 /* RoutedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,8 @@
 		D6B2DAF323D3817500962E46 /* 0hh1 */ = {
 			isa = PBXGroup;
 			children = (
+				D6B2DB2223D3B39100962E46 /* Shared */,
+				D6B2DB1F23D3B19F00962E46 /* Utilities */,
 				D6B2DB1323D3926300962E46 /* Resources */,
 				D6B2DB0C23D384AD00962E46 /* Helpers */,
 				D6B2DB0823D381AA00962E46 /* Controller */,
@@ -92,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				D6B2DB0A23D381CA00962E46 /* MenuViewController.swift */,
+				D6B2DB1A23D3A7C700962E46 /* BoardSelectionViewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -112,6 +121,22 @@
 				D6B2DB1723D3A62100962E46 /* Lobster 1.4.otf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D6B2DB1F23D3B19F00962E46 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D6B2DB2023D3B1AB00962E46 /* RootRouter.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D6B2DB2223D3B39100962E46 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D6B2DB2723D3B51200962E46 /* RoutedViewController.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,12 +212,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6B2DB0E23D384ED00962E46 /* Extensions.swift in Sources */,
+				D6B2DB1B23D3A7C700962E46 /* BoardSelectionViewController.swift in Sources */,
 				D6B2DB1023D384F400962E46 /* VerticalStackView.swift in Sources */,
 				D6B2DAF923D3817500962E46 /* ViewController.swift in Sources */,
+				D6B2DB2123D3B1AB00962E46 /* RootRouter.swift in Sources */,
 				D6B2DAF523D3817500962E46 /* AppDelegate.swift in Sources */,
 				D6B2DAF723D3817500962E46 /* SceneDelegate.swift in Sources */,
 				D6B2DB1223D384FB00962E46 /* UIView+Layout.swift in Sources */,
 				D6B2DB0B23D381CA00962E46 /* MenuViewController.swift in Sources */,
+				D6B2DB2823D3B51200962E46 /* RoutedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
